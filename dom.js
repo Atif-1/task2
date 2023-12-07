@@ -15,7 +15,7 @@ for(let i=0;i<items.length;i++){
 	items[i].style.fontWeight='bold';
 }
 
-
+//Task 5
 var li=document.getElementsByTagName('li');
 li[4].style.background='red';
 
