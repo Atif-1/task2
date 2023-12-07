@@ -15,6 +15,10 @@ for(let i=0;i<items.length;i++){
 	items[i].style.fontWeight='bold';
 }
 
+var li=document.getElementsByTagName('li');
+li[4].style.background='red';
+
+
 var bg=document.getElementById('main-header');
 bg.style.borderBottom='3px solid black';
 
