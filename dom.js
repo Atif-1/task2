@@ -39,6 +39,7 @@
 // let thirdItem=document.querySelector('.list-group-item:nth-child(3)');
 // thirdItem.style.color=white;
 
+
 let secondItem=document.querySelectorAll('li');
 secondItem[1].style.color='green';
 
