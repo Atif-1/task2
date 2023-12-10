@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact Form</title>
+	<style>
+		#container {
+			border-radius: 4px;
+			margin: 5% 5% 10% 5%;
+			
+			background-color: white;
+			border: 1px solid darkorange;
+		}
+		
+		h1{
+			text-align: center;
+			font-size: 2rem;
+			color: orange;
+
+		}
+		h5{
+			font-size: 1rem;
+			text-align:center ;
+		}
+		
+		a{
+			font-size: 1.2rem;
+			border: 1px solid rgb(247, 95, 14);
+			border-radius: 5px;
+			background-color: rgb(232, 121, 29);
+			color: #ffffff;
+			text-decoration: none;
+			padding: 1px 1px 1px 1px;
+			
+		}
+		label{
+			margin-left: 1% ;
+		}
+		#tabs{
+			margin: 0% 0% 0% 85%;
+			
+		}
+		.inp{
+			width: 95%;
+		}
+		button{
+			font-size: 100%;
+			width: 20%;
+			margin: 3% 0% 1% 0%;
+			background-color: orange;
+			color: white;
+			
+		}
+		label{
+			margin: 0.5rem 0 0.5rem 0;
+		}
+		input{
+			margin-bottom: 1rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="full">
+			<div id="container">
+			<h1><u>Form</u></h1>
+			<form id="main">
+				<label for="name">Name:</label><br>
+				<input type="text"  id="name" class="inp" name="name"><br>
+				<label for="mail">Email:</label><br>
+				<input type="text" id="mail" class="inp" name="mail"><br>
+				<label for="phone">Phone:</label><br>
+				<input type="number" id="phone" class="inp" name="phone"><br>
+				<button type="submit">Submit</button>
+			</form>
+			</div>
+	</div>
+	<script src="dom.js"></script>
+</body>
+</html>
