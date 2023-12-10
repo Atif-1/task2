@@ -7,23 +7,25 @@
 	<style>
 		#container {
 			border-radius: 4px;
-			margin: 5% 5% 10% 5%;
-			
+			margin: 5% 20% 1% 20%;
+			padding: 2% 2% 2% 2%;
 			background-color: white;
 			border: 1px solid darkorange;
 		}
 		
-		h1{
+		h2{
 			text-align: center;
 			font-size: 2rem;
 			color: orange;
-
 		}
 		h5{
 			font-size: 1rem;
 			text-align:center ;
 		}
 		
+		button{
+			margin: auto;
+		}
 		a{
 			font-size: 1.2rem;
 			border: 1px solid rgb(247, 95, 14);
@@ -37,6 +39,15 @@
 		label{
 			margin-left: 1% ;
 		}
+		#logo{
+			background-color:rgb(232, 121, 29);
+			margin-right: 94% ;
+			text-align: center;
+			font-size: 2.5rem;
+			text-decoration: underline;
+			text-align: left;
+			color: azure;
+		}
 		#tabs{
 			margin: 0% 0% 0% 85%;
 			
@@ -44,38 +55,62 @@
 		.inp{
 			width: 95%;
 		}
-		button{
+		#subBtn{
 			font-size: 100%;
-			width: 20%;
+			width: 100%;
 			margin: 3% 0% 1% 0%;
 			background-color: orange;
-			color: white;
-			
+			color: white
+		}
+		hr{
+			color: orange;
 		}
 		label{
 			margin: 0.5rem 0 0.5rem 0;
 		}
+		#tfc{
+			width: 50%;
+		}
+		#tf{
+			width: 48%;
+		}
 		input{
 			margin-bottom: 1rem;
+		}
+		li{
+			background: #d6d6d6;
+		}
+		.delete{
+			margin-left: 1rem;
+			background: rgb(232, 4, 4);
+			color: white;
+			border-radius: 0.5rem;
+			
 		}
 	</style>
 </head>
 <body>
 	<div id="full">
+		<div id="logo">YAV</div><div id="tabs"><a href="s.html">Schedule a call</a>
+			<a href="h.html">Hire with us</a></div>
 			<div id="container">
-			<h1><u>Form</u></h1>
-			<form id="main">
+			<h2>Book a call</h2>
+			<h5>Book a slot and our representative will call you within 1hr of selected time</h5>
+			<hr>
+			<form action="#" onsubmit="onSubmit(event)">
 				<label for="name">Name:</label><br>
 				<input type="text"  id="name" class="inp" name="name"><br>
 				<label for="mail">Email:</label><br>
 				<input type="text" id="mail" class="inp" name="mail"><br>
 				<label for="phone">Phone:</label><br>
 				<input type="number" id="phone" class="inp" name="phone"><br>
-				<button type="submit">Submit</button>
+				<label for="tfc">Time for call:</label><br>
+				<input type="date" id="tfc" name="tfc"><input type="time" id="tf" name="tf"><br>
+				<button type="submit" id="subBtn" onclick="onSubmit"><b>Get A Call</b></button>
 			</form>
 			</div>
 			<ul id="list"></ul>
 	</div>
-	<script src="dom.js"></script>
+		<script src="dom.js"></script>
 </body>
 </html>
