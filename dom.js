@@ -23,11 +23,12 @@ var key=email;
 	
 	//showing on screen
 	let li=document.createElement('li');
-	li.appendChild(document.createTextNode(n));
-	li.appendChild(document.createTextNode(email));
-	li.appendChild(document.createTextNode(p));
-	li.appendChild(document.createTextNode(tfc));
-	li.appendChild(document.createTextNode(tf));
+	
+	li.appendChild(document.createTextNode(n+' '));
+	li.appendChild(document.createTextNode(p+' '));
+	li.appendChild(document.createTextNode(email+' '));
+	li.appendChild(document.createTextNode(tfc+' '));
+	li.appendChild(document.createTextNode(tf+' '));
 	list.appendChild(li);
 	//creating delete button
 	var delbtn=document.createElement('button');
@@ -47,6 +48,31 @@ var key=email;
 			localStorage.removeItem(key);
 		}
 	}
+	//edit button
+	let editbtn=document.createElement('button');
+	editbtn.className='eBtn';
+	let etxt=document.createTextNode('edit');
+	editbtn.appendChild(etxt);
+	li.appendChild(editbtn);
+	editbtn.addEventListener('click',edit);
+	function edit(e){
+		let li=e.target.parentElement;
+			list.removeChild(li);
+		let ninput=document.querySelector('#name');
+		let einput=document.querySelector('#mail');
+		let pinput=document.querySelector('#phone');
+		let tfcin=document.querySelector('#tfc');
+		let tfin=document.querySelector('#tf');
+		ninput.value=n;
+		einput.value=email;
+		pinput.value=p;
+		tfcin.value=tfc;
+		tfin.value=tf;
+
+
+	}
+
+
 }
 
 
