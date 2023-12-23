@@ -17,11 +17,18 @@ my_obj.timeForCall=tf;
 //adding key
 var key=email;
 //serializing
-	const objJSON=JSON.stringify(my_obj);
+	// const objJSON=JSON.stringify(my_obj);
 //inserting in local storage
-	localStorage.setItem(key,objJSON);
+	// localStorage.setItem(key,objJSON);
+	axios.post('https://crudcrud.com/api/23b998d2db1d493c910d61be1fd896cc/appData',
+	my_obj).then((response) => {
+		console.log(response.data);
+	}).catch((err) => {
+		console.log('something went wrong');
+	});
 	
 	//showing on screen
+	function show(){
 	let li=document.createElement('li');
 	
 	li.appendChild(document.createTextNode(n+' '));
@@ -68,7 +75,7 @@ var key=email;
 		pinput.value=p;
 		tfcin.value=tfc;
 		tfin.value=tf;
-
+	}
 
 	}
 
